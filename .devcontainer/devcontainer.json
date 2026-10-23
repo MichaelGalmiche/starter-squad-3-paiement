@@ -8,11 +8,6 @@
     // Version figée de Spec Kit (tag). À renseigner quand Zenika l'aura figée ; "main" sinon.
     "SPEC_KIT_REF": "main"
   },
-  "secrets": {
-    "ANTHROPIC_API_KEY": { "description": "À LAISSER VIDE si vous avez un compte Claude (abonnement) : vous vous connecterez avec claude auth login. Seulement pour une clé API." },
-    "ANTHROPIC_AUTH_TOKEN": { "description": "À laisser vide. Seulement pour un jeton de gateway." },
-    "ANTHROPIC_BASE_URL": { "description": "À laisser vide. Seulement pour une gateway." }
-  },
   "customizations": {
     "codespaces": {
       // Permet de publier dans le Context Nexus depuis le Codespace (droits d'écriture requis sur le dépôt).

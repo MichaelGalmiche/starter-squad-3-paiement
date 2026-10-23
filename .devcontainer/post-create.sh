@@ -23,7 +23,13 @@ for v in ANTHROPIC_API_KEY ANTHROPIC_AUTH_TOKEN ANTHROPIC_BASE_URL; do [ -z "${!
 RC
 
 echo "▸ Context Nexus"
-[ -d "$NEXUS_DIR/.git" ] || git clone --quiet "$NEXUS_URL" "$NEXUS_DIR"
+# Vrai dossier dans le projet (visible dans l'explorateur, on peut y copier-coller des fichiers),
+# exclu de git via .git/info/exclude : rien à committer dans le starter.
+NEXUS_REAL="$STARTER_DIR/context-nexus"
+[ -d "$NEXUS_REAL/.git" ] || git clone --quiet "$NEXUS_URL" "$NEXUS_REAL"
+grep -qx '/context-nexus' "$STARTER_DIR/.git/info/exclude" 2>/dev/null || echo '/context-nexus' >> "$STARTER_DIR/.git/info/exclude"
+# Les chemins ../context-nexus des consignes et des commandes restent valables.
+[ -e "$NEXUS_DIR" ] || ln -s "$NEXUS_REAL" "$NEXUS_DIR"
 
 # La squad se déduit du nom du dépôt starter (starter-squad-1-offre → squad-1-offre), ou de $SQUAD.
 SQUAD="${SQUAD:-$(basename "$STARTER_DIR" | sed 's/^starter-//')}"
