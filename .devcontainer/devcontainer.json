@@ -1,0 +1,29 @@
+{
+  // Environnement prêt à l'emploi pour un starter du Hackathon Champions (GitHub Codespaces ou VS Code).
+  // Node 22, Git, Claude Code, uv, Spec Kit, et le Context Nexus cloné à côté du starter.
+  "name": "Hackathon Champions · starter",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "hostRequirements": { "cpus": 2 },
+  "containerEnv": {
+    // Version figée de Spec Kit (tag). À renseigner quand Zenika l'aura figée ; "main" sinon.
+    "SPEC_KIT_REF": "main"
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": { "description": "À LAISSER VIDE si vous avez un compte Claude (abonnement) : vous vous connecterez avec claude auth login. Seulement pour une clé API." },
+    "ANTHROPIC_AUTH_TOKEN": { "description": "À laisser vide. Seulement pour un jeton de gateway." },
+    "ANTHROPIC_BASE_URL": { "description": "À laisser vide. Seulement pour une gateway." }
+  },
+  "customizations": {
+    "codespaces": {
+      // Permet de publier dans le Context Nexus depuis le Codespace (droits d'écriture requis sur le dépôt).
+      "repositories": {
+        "zenika-dev/ai4d-hackathon-context-nexus": { "permissions": { "contents": "write" } }
+      },
+      "openFiles": [ "CLAUDE.md" ]
+    },
+    "vscode": {
+      "extensions": [ "anthropic.claude-code" ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh"
+}
