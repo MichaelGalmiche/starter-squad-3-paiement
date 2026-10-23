@@ -1,0 +1,177 @@
+[
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-01",
+    "occupancyRate": 72
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-02",
+    "occupancyRate": 81
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-03",
+    "occupancyRate": 88
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-04",
+    "occupancyRate": 93
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-05",
+    "occupancyRate": 97
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-06",
+    "occupancyRate": 64
+  },
+  {
+    "hotelId": "VEL-PAR-01",
+    "night": "2026-11-07",
+    "occupancyRate": 58
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-01",
+    "occupancyRate": 55
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-02",
+    "occupancyRate": 62
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-03",
+    "occupancyRate": 70
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-04",
+    "occupancyRate": 78
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-05",
+    "occupancyRate": 84
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-06",
+    "occupancyRate": 49
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "night": "2026-11-07",
+    "occupancyRate": 41
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-01",
+    "occupancyRate": 48
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-02",
+    "occupancyRate": 52
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-03",
+    "occupancyRate": 61
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-04",
+    "occupancyRate": 66
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-05",
+    "occupancyRate": 59
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-06",
+    "occupancyRate": 44
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "night": "2026-11-07",
+    "occupancyRate": 39
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-01",
+    "occupancyRate": 83
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-02",
+    "occupancyRate": 86
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-03",
+    "occupancyRate": 91
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-04",
+    "occupancyRate": 95
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-05",
+    "occupancyRate": 96
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-06",
+    "occupancyRate": 90
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "night": "2026-11-07",
+    "occupancyRate": 77
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-01",
+    "occupancyRate": 61
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-02",
+    "occupancyRate": 67
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-03",
+    "occupancyRate": 74
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-04",
+    "occupancyRate": 80
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-05",
+    "occupancyRate": 86
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-06",
+    "occupancyRate": 71
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "night": "2026-11-07",
+    "occupancyRate": 63
+  }
+]

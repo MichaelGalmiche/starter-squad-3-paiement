@@ -1,0 +1,47 @@
+[
+  {
+    "hotelId": "VEL-PAR-01",
+    "city": "Paris",
+    "brand": "Vélora Signature",
+    "rooms": 180,
+    "standardCheckoutTime": "12:00",
+    "latestCheckoutTime": "16:00",
+    "timeZone": "Europe/Paris"
+  },
+  {
+    "hotelId": "VEL-LYO-02",
+    "city": "Lyon",
+    "brand": "Vélora City",
+    "rooms": 120,
+    "standardCheckoutTime": "11:00",
+    "latestCheckoutTime": "15:00",
+    "timeZone": "Europe/Paris"
+  },
+  {
+    "hotelId": "VEL-BDX-03",
+    "city": "Bordeaux",
+    "brand": "Vélora City",
+    "rooms": 95,
+    "standardCheckoutTime": "11:00",
+    "latestCheckoutTime": "14:00",
+    "timeZone": "Europe/Paris"
+  },
+  {
+    "hotelId": "VEL-MRS-04",
+    "city": "Marseille",
+    "brand": "Vélora Sea",
+    "rooms": 210,
+    "standardCheckoutTime": "12:00",
+    "latestCheckoutTime": "18:00",
+    "timeZone": "Europe/Paris"
+  },
+  {
+    "hotelId": "VEL-NCE-05",
+    "city": "Nice",
+    "brand": "Vélora Sea",
+    "rooms": 140,
+    "standardCheckoutTime": "11:00",
+    "latestCheckoutTime": "16:00",
+    "timeZone": "Europe/Paris"
+  }
+]

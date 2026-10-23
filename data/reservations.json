@@ -1,0 +1,62 @@
+[
+  {
+    "reservationId": "RES-104233",
+    "hotelId": "VEL-LYO-02",
+    "status": "CONFIRMED",
+    "checkIn": "2026-11-01",
+    "checkOut": "2026-11-02",
+    "nightlyRateMinor": 11900,
+    "currency": "EUR",
+    "lateCheckoutPurchased": false
+  },
+  {
+    "reservationId": "RES-104234",
+    "hotelId": "VEL-PAR-01",
+    "status": "CONFIRMED",
+    "checkIn": "2026-11-03",
+    "checkOut": "2026-11-05",
+    "nightlyRateMinor": 24500,
+    "currency": "EUR",
+    "lateCheckoutPurchased": false
+  },
+  {
+    "reservationId": "RES-104235",
+    "hotelId": "VEL-MRS-04",
+    "status": "CONFIRMED",
+    "checkIn": "2026-11-04",
+    "checkOut": "2026-11-05",
+    "nightlyRateMinor": 16800,
+    "currency": "EUR",
+    "lateCheckoutPurchased": false
+  },
+  {
+    "reservationId": "RES-104236",
+    "hotelId": "VEL-BDX-03",
+    "status": "CANCELLED",
+    "checkIn": "2026-11-02",
+    "checkOut": "2026-11-03",
+    "nightlyRateMinor": 9200,
+    "currency": "EUR",
+    "lateCheckoutPurchased": false
+  },
+  {
+    "reservationId": "RES-104237",
+    "hotelId": "VEL-NCE-05",
+    "status": "CONFIRMED",
+    "checkIn": "2026-11-05",
+    "checkOut": "2026-11-07",
+    "nightlyRateMinor": 13900,
+    "currency": "EUR",
+    "lateCheckoutPurchased": true
+  },
+  {
+    "reservationId": "RES-104238",
+    "hotelId": "VEL-LYO-02",
+    "status": "CONFIRMED",
+    "checkIn": "2026-11-06",
+    "checkOut": "2026-11-07",
+    "nightlyRateMinor": 10400,
+    "currency": "EUR",
+    "lateCheckoutPurchased": false
+  }
+]
