@@ -28,3 +28,20 @@ S'il manque ou date du bloc précédent, demande à la squad de lancer :
   - « vérifie qu'on passe la gate » : `context-assemble --check`, tests du starter, puis la liste de ce qui manque.
 - Langue : code en anglais, specs et documents du Nexus en français.
 - Sois économe en tokens : la squad a un budget suivi en direct. Préfère lire un fichier précis plutôt que tout le dépôt.
+
+## Le starter
+
+- API Fastify en TypeScript (Node 22). La route du volet est dans `src/routes.ts` : c'est un **bouchon** derrière le flag `flags.json`, à implémenter d'après la spec et le contrat v1 de la squad.
+- `src/mocks/` simule les contrats **v0** des squads voisines : développe et teste contre eux. Quand un contrat voisin change de version, mets le mock à jour en même temps que la spec.
+- `data/` contient des données synthétiques (hôtels, réservations, occupation prévue). Montants toujours en **centimes**.
+- Tests dans `test/` (Vitest) : nomme chaque test d'après le critère d'acceptance qu'il couvre (ENG-04).
+
+| Commande | Rôle |
+|---|---|
+| `npm test` / `npm run test:coverage` | Tests, couverture ≥ 70 % |
+| `npm run lint` / `npm run typecheck` | Qualité du code |
+| `npm run scan` | Aucun champ de carte ni secret (SEC-01, SEC-04) |
+| `npm run context` | Réassemble `.context/brief.md` depuis le Context Nexus |
+| `npm run gate-check -- G3` | Critères automatiques d'une gate (G1 à G6) : lance-le avant chaque créneau |
+| `npm run deploy` / `npm run observe` | Déploiement local et lecture de la santé et des métriques (G4) |
+| `npm run flag -- <nom> on --reason "…"` | Bascule tracée d'un flag : **réservée à un humain**, ne la lance pas toi-même |

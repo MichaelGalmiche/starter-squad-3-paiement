@@ -36,8 +36,27 @@ Pas à pas complet : [fiche de démarrage, section Squad 3](https://github.com/z
 | `.devcontainer/` | Environnement Codespace : Node 22, Claude Code, Spec Kit, contexte partagé cloné à côté |
 | `.specify/`, `.claude/skills/` | Spec Kit initialisé pour Claude : `/speckit-constitution`, `/speckit-specify`, `/speckit-plan`… |
 | `.context/brief.md` | Contexte de la squad, généré par `context-assemble` (non versionné) |
+| `src/routes.ts` | La route du volet, **en bouchon** derrière son feature flag : à implémenter avec `/speckit-implement` |
+| `src/mocks/` | Mocks des contrats v0 des squads voisines, pour avancer sans les attendre |
+| `data/` | Données synthétiques : hôtels pilotes, réservations, occupation prévue (montants en centimes) |
+| `scripts/` | Flag tracé, déploiement local, observation, scan PCI, gate-check |
+| `.github/workflows/ci.yml` | CI : lint, typecheck, tests et couverture, scan PCI et secrets, audit des dépendances |
 
-Le code du starter (API TypeScript, tests, CI, feature flags) est ajouté par l'équipe Zenika avant le 26/10.
+
+## Développer
+
+| Commande | Rôle |
+|---|---|
+| `npm run dev` | Lance l'API en mode développement |
+| `npm test` · `npm run test:coverage` | Tests (Vitest), couverture ≥ 70 % (ENG-03) |
+| `npm run lint` · `npm run typecheck` | Qualité du code (ENG-01) |
+| `npm run scan` | Aucun champ de carte ni secret (SEC-01, SEC-04) |
+| `npm run context` | Réassemble `.context/brief.md` depuis le contexte partagé |
+| `npm run gate-check -- G1` | Critères automatiques d'une gate, de G1 à G6, à lancer avant chaque créneau |
+| `npm run flag -- <flag> on --reason "pourquoi"` | Bascule un flag et la trace dans le journal de la squad (Context Nexus) |
+| `npm run deploy` · `npm run observe` | Déploiement local en arrière-plan, puis santé et métriques (G4) |
+
+Le contexte partagé doit être cloné à côté du starter (`../context-nexus`) : c'est automatique en Codespace et avec le script d'installation.
 
 ## Liens
 
