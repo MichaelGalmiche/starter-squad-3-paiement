@@ -5,8 +5,8 @@
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
   "hostRequirements": { "cpus": 2 },
   "containerEnv": {
-    // Version figée de Spec Kit (tag). À renseigner quand Zenika l'aura figée ; "main" sinon.
-    "SPEC_KIT_REF": "main"
+    // Version figée de Spec Kit (dernier tag publié au 25/10/2026). À changer seulement après un test complet.
+    "SPEC_KIT_REF": "v1.2.3"
   },
   "customizations": {
     "codespaces": {
@@ -20,5 +20,10 @@
       "extensions": [ "anthropic.claude-code" ]
     }
   },
-  "postCreateCommand": "bash .devcontainer/post-create.sh"
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  // L'écran de la squad (port 4000) démarre avec le Codespace et s'ouvre dans l'éditeur dès qu'il répond.
+  "postStartCommand": "node ../context-nexus/tools/ecran-squad.mjs > /dev/null 2>&1 || true",
+  "portsAttributes": {
+    "4000": { "label": "Écran de la squad", "onAutoForward": "openPreview" }
+  }
 }

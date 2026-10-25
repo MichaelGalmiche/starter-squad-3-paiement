@@ -8,9 +8,9 @@ STARTER_DIR="$(pwd)"
 NEXUS_DIR="$(dirname "$STARTER_DIR")/context-nexus"
 export PATH="$HOME/.local/bin:$PATH"
 
-echo "▸ uv et Spec Kit (${SPEC_KIT_REF:-main})"
+echo "▸ uv et Spec Kit (${SPEC_KIT_REF:-v1.2.3})"
 command -v uv >/dev/null || curl -LsSf https://astral.sh/uv/install.sh | env UV_NO_MODIFY_PATH=1 sh
-uv tool install --force --quiet --python 3.13 specify-cli --from "git+https://github.com/github/spec-kit.git@${SPEC_KIT_REF:-main}"
+uv tool install --force --quiet --python 3.13 specify-cli --from "git+https://github.com/github/spec-kit.git@${SPEC_KIT_REF:-v1.2.3}"
 
 echo "▸ Claude Code"
 command -v claude >/dev/null || curl -fsSL https://claude.ai/install.sh | bash
@@ -36,6 +36,11 @@ SQUAD="${SQUAD:-$(basename "$STARTER_DIR" | sed 's/^starter-//')}"
 if [[ " $SQUADS " == *" $SQUAD "* ]]; then
   echo "▸ Contexte de $SQUAD"
   node "$NEXUS_DIR/tools/context-assemble.mjs" --squad "$SQUAD" --out "$STARTER_DIR/.context/brief.md" | tail -3
+  # Coach (/bienvenue, /coach), style pédagogique, garde-fous : facultatif, jamais bloquant.
+  if [ -f "$NEXUS_DIR/tools/overlay/apply-overlay.mjs" ]; then
+    echo "▸ Expérience du hackathon"
+    node "$NEXUS_DIR/tools/overlay/apply-overlay.mjs" --starter "$STARTER_DIR" --squad "$SQUAD" || true
+  fi
 else
   echo "⚠ Squad non reconnue (« $SQUAD »). Lancez à la main :"
   echo "  node ../context-nexus/tools/context-assemble.mjs --squad <squad> --out .context/brief.md"
@@ -47,4 +52,4 @@ if [ -f package.json ]; then echo "▸ npm install"; npm install --silent; fi
 echo
 echo "✓ Codespace prêt."
 echo "  1. Connectez Claude à votre compte : claude auth login"
-echo "  2. Puis parlez à l'agent : icône Claude à gauche, ou claude dans le terminal"
+echo "  2. Lancez claude dans le terminal (répondez Oui à la confiance du dossier), puis tapez /bienvenue"
