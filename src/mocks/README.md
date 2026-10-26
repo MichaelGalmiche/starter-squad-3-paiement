@@ -9,5 +9,5 @@
     | Mock | Contrat simulé |
     |---|---|
     | `offre-api.ts` | API d'offre v0 (squad Offre) |
-| `regle-prix.ts` | Règle de prix v0 (squad Prix) |
+| `regle-prix.ts` | Règle de prix v1.0.0 (squad Prix) |
 | `payvel.ts` | PSP fictif PayVel |
