@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', 'coverage', '.specify', '.claude', '.context', '.run', 'node_modules'] },
+  { ignores: ['dist', 'coverage', '.specify', '.claude', '.context', '.run', 'context-nexus', 'node_modules'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

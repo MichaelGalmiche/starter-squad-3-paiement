@@ -37,7 +37,7 @@ Pas à pas complet : [fiche de démarrage, section Squad 3](https://github.com/z
 | `.specify/`, `.claude/skills/` | Spec Kit initialisé pour Claude : `/speckit-constitution`, `/speckit-specify`, `/speckit-plan`… |
 | `.context/brief.md` | Contexte de la squad, généré par `context-assemble` (non versionné) |
 | `src/routes.ts` | La route du volet, **en bouchon** derrière son feature flag : à implémenter avec `/speckit-implement` |
-| `src/mocks/` | Mocks des contrats v0 des squads voisines, pour avancer sans les attendre |
+| `src/mocks/` | Mocks des contrats v0 des autres squads, pour avancer sans les attendre |
 | `data/` | Données synthétiques : hôtels pilotes, réservations, occupation prévue (montants en centimes) |
 | `scripts/` | Flag tracé, déploiement local, observation, scan PCI, gate-check |
 | `.github/workflows/ci.yml` | CI : lint, typecheck, tests et couverture, scan PCI et secrets, audit des dépendances |

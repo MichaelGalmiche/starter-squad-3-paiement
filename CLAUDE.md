@@ -32,7 +32,7 @@ S'il manque ou date du bloc précédent, demande à la squad de lancer :
 ## Le starter
 
 - API Fastify en TypeScript (Node 22). La route du volet est dans `src/routes.ts` : c'est un **bouchon** derrière le flag `flags.json`, à implémenter d'après la spec et le contrat v1 de la squad.
-- `src/mocks/` simule les contrats **v0** des squads voisines : développe et teste contre eux. Quand un contrat voisin change de version, mets le mock à jour en même temps que la spec.
+- `src/mocks/` simule les contrats **v0** des autres squads : développe et teste contre eux. Quand le contrat d'une autre squad change de version, mets le mock à jour en même temps que la spec.
 - `data/` contient des données synthétiques (hôtels, réservations, occupation prévue). Montants toujours en **centimes**.
 - Tests dans `test/` (Vitest) : nomme chaque test d'après le critère d'acceptance qu'il couvre (ENG-04).
 
